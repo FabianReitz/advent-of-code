@@ -6,14 +6,16 @@ const firstArray: number[] = [];
 const secondArray: number[] = [];
 
 lines.forEach((line) => {
-  const [first, second] = line.trim().split('   ').map(Number);
+  const [first, second] = line.split('   ').map(Number);
   firstArray.push(first);
   secondArray.push(second);
 });
 
 // Day 1: Part 1
-const firstSorted = firstArray.sort((a, b) => a - b);
-const secondSorted = secondArray.sort((a, b) => a - b);
+// const firstSorted = firstArray.sort((a, b) => a - b);
+// const secondSorted = secondArray.sort((a, b) => a - b);
+const firstSorted = firstArray.sort();
+const secondSorted = secondArray.sort();
 
 let diffSum = 0;
 
@@ -37,3 +39,4 @@ firstArray.forEach((value) => {
 });
 
 console.log('Part 2: ', similarityScore);
+// Solution 27267728
